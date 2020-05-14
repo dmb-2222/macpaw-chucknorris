@@ -1,16 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import getJoke  from '../../redux/joke/jokeSelectors';
+import getJoke from '../../redux/joke/jokeSelectors';
 import styles from './ListJoke.module.css';
 import iconeHeartEmpty from '../../assets/icons/icon-heart-empty.svg';
 import iconeLetter from '../../assets/icons/icon-letter-joke.svg';
 import iconeHeartFull from '../../assets/icons/icon-heart-full.svg';
 
-const ListJoke = ({
-  addToFavorite,
-  isFavorite = false,
-  items,
-}) => (
+ListJoke.propTypes = {
+  addToFavorite: PropTypes.bool,
+  isFavorite: PropTypes.bool,
+  items: PropTypes.array,
+};
+
+const ListJoke = ({ addToFavorite, isFavorite = false, items }) => (
   <>
     {items.length !== 0 && (
       <ul className={styles.listJoke__container}>
@@ -52,7 +55,6 @@ const ListJoke = ({
         ))}
       </ul>
     )}
-
   </>
 );
 const mapStateToProps = state => ({
