@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 28px;
+}
+.header__FavoriteText {
+  font-weight: 500;
+  color: #ababab;
+}
+nav {
+  display: flex;
+}
+.nav_iconFavNoActive {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+@media (min-width: 1440px) {
+  .nav_iconFavNoActive,
+  .header__FavoriteText {
+    display: none;
+  }
+}

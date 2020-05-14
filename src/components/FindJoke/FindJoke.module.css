@@ -1,0 +1,128 @@
+.findJoke {
+  margin-top: 78px;
+}
+
+.findJoke__textMain {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.findJoke__textTryFind {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 44px;
+  margin-bottom: 43px;
+}
+
+/* radio-button */
+.findJoke__radio {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 15px;
+}
+.findJoke__radio .findJoke__label {
+  position: relative;
+  display: block;
+  float: left;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ababab;
+  border-radius: 100%;
+}
+.findJoke__radio .findJoke__label:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: var(--text-color-main);
+  opacity: 0;
+  pointer-events: none;
+}
+input[type='radio']:checked + .findJoke__label {
+  border-color: var(--text-color-main);
+}
+input[type='radio']:checked + .findJoke__label:after {
+  opacity: 1;
+}
+.findJoke__hidden {
+  display: none;
+}
+
+/* ratio select category */
+.findJoke__radio_category {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.findJoke__radio_label {
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+.findJoke__category_text {
+  border: 2px solid #f8f8f8;
+  background-color: #ffff;
+  box-sizing: border-box;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  border-radius: 6px;
+  padding: 6px 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #ababab;
+}
+.findJoke__category_text:hover {
+  background: #f8f8f8;
+  color: var(--text-color-main);
+}
+
+.findJoke__category_hidden {
+  display: none;
+}
+
+input[type='radio']:checked + .findJoke__category_text {
+  color: var(--text-color-main);
+  background-color: #f8f8f8;
+}
+
+/* Input Search */
+.searchConsole {
+  border: 2px solid #333333;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 96%;
+  padding: 2%;
+  margin-bottom: 15px;
+}
+.searchConsole::placeholder {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ababab;
+}
+
+/* button */
+.findJoke__btn_getJoke {
+  background: linear-gradient(92.01deg, #8ea7ff 0%, #7291ff 100%);
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffff;
+  padding: 10px 40px;
+  user-select: none;
+  border: none;
+  outline: none;
+}

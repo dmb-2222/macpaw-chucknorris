@@ -1,0 +1,29 @@
+.wraper {
+  padding: 20px;
+}
+.componentFavorite {
+  display: none;
+}
+@media (min-width: 768px) {
+  .wraper {
+    padding: 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .wraper {
+    padding: 0px 0px 0px 140px;
+  }
+  .headerFavorite {
+    display: flex;
+    justify-content: space-between;
+  }
+  .componentsAndFavorite {
+    margin-right: 140px;
+    padding-top: 40px;
+  }
+  .componentFavorite {
+    display: inline-block;
+    background-color: #f8f8f8;
+  }
+}

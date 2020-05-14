@@ -1,0 +1,68 @@
+.listJoke__container {
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+.listJoke__cartOfJoke {
+  position: relative;
+  margin-bottom: 10px;
+  background: #f8f8f8;
+  border-radius: 20px;
+  font-size: 18px;
+  line-height: 26px;
+  padding: 40px 20px;
+}
+.listJoke__box_letter {
+  display: flex;
+  align-items: flex-start;
+}
+.listJoke__btn_heart {
+  display: block;
+  margin-left: auto;
+  margin-bottom: 10px;
+}
+
+.listJoke__iconLetter {
+  margin-right: 20px;
+}
+
+.listJoke__link,
+.listJoke__ID {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 14px;
+}
+.listJoke__ID {
+  color: #ababab;
+}
+
+.listJoke__footerLetter {
+  margin-top: 28px;
+  font-size: 10px;
+  line-height: 14px;
+  color: #ababab;
+}
+
+.listJoke__footerLetter_category {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 6px 20px;
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .listJoke__footerLetter_category {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 10px;
+    margin-bottom: 30px;
+  }
+}
