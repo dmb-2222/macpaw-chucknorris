@@ -26,6 +26,7 @@
     "jest": true
   },
   "rules": {
+    "react/default-props-match-prop-types": [1, { "allowRequiredDefaults": true }],
     "react/jsx-props-no-spreading": 0,
     "no-console": 1,
     "linebreak-style": ["error", "unix"],
