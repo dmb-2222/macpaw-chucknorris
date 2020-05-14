@@ -1,13 +1,20 @@
 import React from 'react';
-
-import styles from './App.module.css';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 import Header from './components/Header';
 import FindJoke from './components/FindJoke';
 import Favorite from './components/Favorite';
 import ListJoke from './components/ListJoke';
+import Loader from './components/Loader';
+
+import styles from './App.module.css';
 
 class App extends React.Component {
+  static propTypes = {
+    isLoading: PropTypes.bool.isRequired,
+  };
+
   state = {
     toggle: true,
     isFavorite: false,
@@ -27,6 +34,7 @@ class App extends React.Component {
 
   render() {
     const { toggle, isFavorite } = this.state;
+    const { isLoading } = this.props;
     return (
       <div className={styles.wraper}>
         <div className={styles.headerFavorite}>
@@ -43,9 +51,12 @@ class App extends React.Component {
           </div>
         </div>
         {!toggle && <Favorite handleClick={this.handleClick} />}
+        {isLoading && <Loader />}
       </div>
     );
   }
 }
-
-export default App;
+const mapStateToProps = state => ({
+  isLoading: state.jokes.loading,
+});
+export default connect(mapStateToProps)(App);

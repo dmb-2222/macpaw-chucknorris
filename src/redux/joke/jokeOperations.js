@@ -36,8 +36,6 @@ export const getJokeFromSearchInputFetch = query => dispatch => {
   axios
     .get(`${baseURL}search?query=${query}`)
     .then(joke => {
-      console.log(joke.data.result);
-
       dispatch(jokeDataFetchSuccess(joke.data.result));
     })
     .catch(err => {

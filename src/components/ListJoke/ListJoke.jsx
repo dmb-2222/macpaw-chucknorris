@@ -7,13 +7,7 @@ import iconeHeartEmpty from '../../assets/icons/icon-heart-empty.svg';
 import iconeLetter from '../../assets/icons/icon-letter-joke.svg';
 import iconeHeartFull from '../../assets/icons/icon-heart-full.svg';
 
-ListJoke.propTypes = {
-  addToFavorite: PropTypes.bool,
-  isFavorite: PropTypes.bool,
-  items: PropTypes.array,
-};
-
-const ListJoke = ({ addToFavorite, isFavorite = false, items }) => (
+const ListJoke = ({ addToFavorite, isFavorite, items }) => (
   <>
     {items.length !== 0 && (
       <ul className={styles.listJoke__container}>
@@ -62,3 +56,9 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps)(ListJoke);
+
+ListJoke.propTypes = {
+  addToFavorite: PropTypes.func,
+  isFavorite: PropTypes.bool,
+  items: PropTypes.array,
+};

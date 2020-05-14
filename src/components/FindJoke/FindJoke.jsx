@@ -20,7 +20,6 @@ class FindJoke extends React.Component {
   };
 
   handleChangeInput = e => {
-    console.log(e.target.value);
     this.setState({
       value: e.target.value,
       name: e.target.name,
@@ -121,7 +120,6 @@ class FindJoke extends React.Component {
                 />
                 <span className={styles.findJoke__category_text}>career</span>
               </label>
-
               <label className={styles.findJoke__radio_label}>
                 <input
                   type="radio"
@@ -161,7 +159,6 @@ class FindJoke extends React.Component {
             <input
               type="text"
               name="liveSearch"
-              // value=""
               placeholder="Free text search..."
               onChange={this.handleChangeInput}
               className={styles.searchConsole}
