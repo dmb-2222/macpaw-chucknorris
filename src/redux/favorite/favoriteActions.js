@@ -1,8 +1,8 @@
 import types from '../types';
 
-const addFavorite = value => ({
+const addFavorite = (items, id) => ({
   type: types.FAVORITE_ADD,
-  payload: value,
+  payload: { items, id },
 });
 
 export default addFavorite;
