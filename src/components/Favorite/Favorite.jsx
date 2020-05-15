@@ -13,13 +13,6 @@ const Favorite = ({ handleClick, itemsFav }) => {
   console.log(itemsFav);
   return (
     <>
-      <div
-        className={styles.favorite__overlay}
-        onClick={handleClick}
-        data-modal="modal"
-        name="modal"
-      ></div>
-
       <div className={styles.favorite__modul}>
         <nav>
           <button onClick={handleClick}>
@@ -32,61 +25,45 @@ const Favorite = ({ handleClick, itemsFav }) => {
           <p className={styles.favorite__FavoriteText}>Favorite</p>
         </nav>
 
-        
-        <div className={styles.favorite__container}>
-          <button className={styles.favorite__btn_heart}>
-            <img src={iconeHeartFull} alt="icone-heart-empty" />
-          </button>
-          <div className={styles.favorite__box_letter}>
-            <img
-              src={iconeLetterFavorite}
-              alt="icon-letter-joke"
-              className={styles.favorite__iconLetter}
-            />
-            <div>
-              <span className={styles.favorite__ID}>ID: </span>
-              <a href="/#" className={styles.favorite__link}>
-                XNaAxUduSw6zANDaIEab7A
-              </a>
-              <p className={styles.favorite__joke_text}>
-                No one truly knows who's Chuck Norris' real father. No one is
-                biologically strong enough for this. He must've conceived
-                himself.
-              </p>
-              <p className={styles.favorite__footerLetter}>
-                Last update: 1923 hours ago
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.favorite__container}>
-          <button className={styles.favorite__btn_heart}>
-            <img src={iconeHeartFull} alt="icone-heart-empty" />
-          </button>
-          <div className={styles.favorite__box_letter}>
-            <img
-              src={iconeLetterFavorite}
-              alt="icon-letter-joke"
-              className={styles.favorite__iconLetter}
-            />
-            <div>
-              <span className={styles.favorite__ID}>ID: </span>
-              <a href="/#" className={styles.favorite__link}>
-                XNaAxUduSw6zANDaIEab7A
-              </a>
-              <p className={styles.favorite__joke_text}>
-                No one truly knows who's Chuck Norris' real father. No one is
-                biologically strong enough for this. He must've conceived
-                himself.
-              </p>
-              <p className={styles.favorite__footerLetter}>
-                Last update: 1923 hours ago
-              </p>
-            </div>
-          </div>
-        </div>
+        {itemsFav.length !== 0 && (
+          <ul className={styles.favorite__container}>
+            {itemsFav.map(item => (
+              <li key={item.id}>
+                <button className={styles.favorite__btn_heart}>
+                  <img src={iconeHeartFull} alt="icon-heart-full.svg" />
+                </button>
+                <div className={styles.favorite__box_letter}>
+                  <img
+                    src={iconeLetterFavorite}
+                    alt="icon-letter-joke"
+                    className={styles.favorite__iconLetter}
+                  />
+                  <div>
+                    <span className={styles.favorite__ID}>ID: </span>
+                    <a href={item.url} className={styles.favorite__link}>
+                      {item.id}
+                    </a>
+                    <p className={styles.favorite__joke_text}>{item.value}</p>
+                    <p className={styles.favorite__footerLetter}>
+                      Last update: {item.updated_at}
+                    </p>
+                    {item.categories.length !== 0 && (
+                      <p className={styles.listJoke__footerLetter_category}>
+                        {item.categories[0]}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
+      <div
+        className={styles.favorite__overlay}
+        data-modal="modal"
+        name="modal"
+      ></div>
     </>
   );
 };

@@ -3,8 +3,6 @@ import types from '../types';
 const favorite = (state = [], { type, payload }) => {
   switch (type) {
     case types.FAVORITE_ADD:
-      // return  [...payload.items]
-      // (numbers.find(num => num > 5))
       return [
         payload.items.find(item =>
           item.id === payload.id ? { ...item, fav: !item.fav } : item,
