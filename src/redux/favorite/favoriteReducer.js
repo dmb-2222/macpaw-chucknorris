@@ -11,7 +11,7 @@ const favorite = (state = [], { type, payload }) => {
               fav: !payload.fav,
             },
           ]
-        : state;
+        : state.filter(item => item.id !== payload.id);
     case types.FAVORITE_DEL:
       return state.filter(item => item.id !== payload.id);
     default:

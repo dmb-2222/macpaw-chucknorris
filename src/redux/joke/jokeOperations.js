@@ -9,34 +9,40 @@ import {
 
 const baseURL = 'https://api.chucknorris.io/jokes/';
 
-export const getRandomJokeDataFetch = () => dispatch => {
+export const getRandomJokeDataFetch = itemsFavorite => dispatch => {
   dispatch(jokeDataFetchStart());
   axios
     .get(`${baseURL}random`)
     .then(joke => {
-      dispatch(jokeDataFetchSuccess(joke.data));
+      dispatch(jokeDataFetchSuccess(joke.data, itemsFavorite));
     })
     .catch(error => jokeDataFetchError(error));
 };
 
-export const getJokeFromCategoryFetch = category => dispatch => {
+export const getJokeFromCategoryFetch = (
+  category,
+  itemsFavorite,
+) => dispatch => {
   dispatch(jokeDataFetchStart());
   axios
     .get(`${baseURL}random?category=${category}`)
     .then(joke => {
-      dispatch(jokeDataFetchSuccess(joke.data));
+      dispatch(jokeDataFetchSuccess(joke.data, itemsFavorite));
     })
     .catch(err => {
       dispatch(jokeDataFetchError(err));
     });
 };
 
-export const getJokeFromSearchInputFetch = query => dispatch => {
+export const getJokeFromSearchInputFetch = (
+  query,
+  itemsFavorite,
+) => dispatch => {
   dispatch(jokeDataFetchStart());
   axios
     .get(`${baseURL}search?query=${query}`)
     .then(joke => {
-      dispatch(jokeDataFetchSuccess(joke.data.result));
+      dispatch(jokeDataFetchSuccess(joke.data.result, itemsFavorite));
     })
     .catch(err => {
       dispatch(jokeDataFetchError(err));

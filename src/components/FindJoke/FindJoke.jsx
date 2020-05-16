@@ -2,11 +2,13 @@ import React from 'react';
 import styles from './FindJoke.module.css';
 
 import { connect } from 'react-redux';
+//store
 import {
   getRandomJokeDataFetch,
   getJokeFromCategoryFetch,
   getJokeFromSearchInputFetch,
 } from '../../redux/joke/jokeOperations';
+import getFav from '../../redux/favorite/favoriteSelectors';
 
 class FindJoke extends React.Component {
   //   static propTypes = {
@@ -58,15 +60,15 @@ class FindJoke extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
     const { value, name } = this.state;
-    const { category, handleInput, random } = this.props;
+    const { category, handleInput, random, items } = this.props;
     if (name === 'category') {
-      category(value);
+      category(value,items);
     }
     if (name === 'liveSearch') {
-      handleInput(value);
+      handleInput(value, items);
     }
     if (value === 'typeOfSearchRandom') {
-      random();
+      random(items);
     }
   };
   render() {
@@ -170,10 +172,14 @@ class FindJoke extends React.Component {
     );
   }
 }
+const mapStateToProps = state => ({
+  items: getFav(state),
+});
 
 const mapDispatchToProps = dispatch => ({
-  random: () => dispatch(getRandomJokeDataFetch()),
-  category: value => dispatch(getJokeFromCategoryFetch(value)),
-  handleInput: value => dispatch(getJokeFromSearchInputFetch(value)),
+  random: items => dispatch(getRandomJokeDataFetch(items)),
+  category: (value,items) => dispatch(getJokeFromCategoryFetch(value,items)),
+  handleInput: (value, items) =>
+    dispatch(getJokeFromSearchInputFetch(value, items)),
 });
-export default connect(null, mapDispatchToProps)(FindJoke);
+export default connect(mapStateToProps, mapDispatchToProps)(FindJoke);

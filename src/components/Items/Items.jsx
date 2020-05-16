@@ -20,10 +20,10 @@ const Items = ({
   const { id, value, updated_at, categories, url, fav } = itemElement;
 
   const wrapFanction = (itemElement, itemId) => {
+    changeFlipped(!isFlipped);
     addToFav && addToFav(itemElement);
     addFlagIsFav && addFlagIsFav(itemId);
     handleDelFav && handleDelFav(itemElement, itemId);
-    changeFlipped(true);
   };
   return (
     <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">

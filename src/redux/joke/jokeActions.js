@@ -3,9 +3,9 @@ import types from '../types';
 export const jokeDataFetchStart = () => ({
   type: types.JOKE_DATA_FETCH_START,
 });
-export const jokeDataFetchSuccess = response => ({
+export const jokeDataFetchSuccess = (response, itemsFavorite) => ({
   type: types.JOKE_DATA_FETCH_SUCCESS,
-  payload: response,
+  payload: { response, itemsFavorite },
 });
 export const jokeDataFetchError = error => ({
   type: types.JOKE_DATA_FETCH_ERROR,
