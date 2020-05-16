@@ -1,9 +1,3 @@
-.listJoke__container {
-  width: 100%;
-  margin-top: 40px;
-  margin-bottom: 15px;
-}
-
 .listJoke__cartOfJoke {
   position: relative;
   margin-bottom: 10px;
@@ -13,11 +7,23 @@
   line-height: 26px;
   padding: 40px 20px;
 }
+.favorite__list {
+  font-size: 18px;
+  line-height: 26px;
+  padding: 20px 20px;
+  background: #ffffff;
+  border: 1px solid #f8f8f8;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
 .listJoke__box_letter {
   display: flex;
   align-items: flex-start;
 }
-.listJoke__btn_heart {
+.item__btn_heart {
   display: block;
   margin-left: auto;
   margin-bottom: 10px;
@@ -44,7 +50,8 @@
   color: #ababab;
 }
 
-.listJoke__footerLetter_category {
+.listJoke__footerLetter_category,
+.favorite {
   display: inline-block;
   font-weight: 500;
   font-size: 10px;
@@ -56,13 +63,16 @@
   padding: 6px 20px;
   margin-top: 10px;
 }
+.favorite {
+  margin-top: 10px;
+  background: #f8f8f8;
+}
 
-/* @media (min-width: 768px) {
+@media (min-width: 768px) {
   .listJoke__footerLetter_category {
     position: absolute;
     right: 0;
     bottom: 0;
     margin-right: 10px;
-    margin-bottom: 30px;
   }
-} */
+}

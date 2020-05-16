@@ -14,6 +14,7 @@ import styles from './App.module.css';
 class App extends React.Component {
   static propTypes = {
     isLoading: PropTypes.bool.isRequired,
+    items: PropTypes.objectOf(PropTypes.object()).isRequired,
   };
 
   state = {
@@ -30,14 +31,16 @@ class App extends React.Component {
 
   render() {
     const { toggle } = this.state;
-    const { isLoading } = this.props;
+    const { isLoading, items } = this.props;
     return (
       <div className={styles.wraper}>
         <div className={styles.headerFavorite}>
           <div className={styles.componentsAndFavorite}>
             <Header handleClick={this.handleClick} toggle={toggle} />
             <FindJoke />
-            <ListJoke addToFavorite={this.addToFavorite} />
+            {items.length !== 0 && (
+              <ListJoke addToFavorite={this.addToFavorite} />
+            )}
           </div>
           <div className={styles.componentFavorite}>
             <Favorite handleClick={this.handleClick} />
@@ -51,5 +54,6 @@ class App extends React.Component {
 }
 const mapStateToProps = state => ({
   isLoading: state.jokes.loading,
+  items: state.jokes.dataJokes,
 });
 export default connect(mapStateToProps)(App);

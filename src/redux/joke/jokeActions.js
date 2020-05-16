@@ -14,7 +14,7 @@ export const jokeDataFetchError = error => ({
 
 // JOKE_ADD_IS_FAVORITE_FLAG: 'JOKE_ADD_IS_FAVORITE_FLAG',
 
-export const jokeAddFlagIsFavorite = (items, id) => ({
+export const jokeAddFlagIsFavorite = id => ({
   type: types.JOKE_ADD_IS_FAVORITE_FLAG,
-  payload: { items, id },
+  payload: id,
 });

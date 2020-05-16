@@ -1,8 +1,11 @@
 import types from '../types';
 
-const addFavorite = (items, id) => ({
+export const addFavorite = item => ({
   type: types.FAVORITE_ADD,
-  payload: { items, id },
+  payload: item,
 });
 
-export default addFavorite;
+export const handleDelete = (itemsFav, id) => ({
+  type: types.FAVORITE_DEL,
+  payload: { itemsFav, id },
+});

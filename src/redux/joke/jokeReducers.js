@@ -4,14 +4,12 @@ import types from '../types';
 const dataJokes = (state = [], { type, payload }) => {
   switch (type) {
     case types.JOKE_DATA_FETCH_SUCCESS:
-      // Whithot flag fav
-      // return Array.isArray(payload) ? [...payload] : [payload];
       return Array.isArray(payload)
         ? payload.map(item => ({ fav: false, ...item }))
         : [payload].map(item => ({ fav: false, ...item }));
     case types.JOKE_ADD_IS_FAVORITE_FLAG:
-      return payload.items.map(item =>
-        item.id === payload.id ? { ...item, fav: !item.fav } : item,
+      return state.map(item =>
+        item.id === payload ? { ...item, fav: !item.fav } : item,
       );
     default:
       return state;
