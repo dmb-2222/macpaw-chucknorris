@@ -14,7 +14,7 @@ import styles from './App.module.css';
 class App extends React.Component {
   static propTypes = {
     isLoading: PropTypes.bool.isRequired,
-    items: PropTypes.arrayOf(PropTypes.object()).isRequired,
+    items: PropTypes.arrayOf(PropTypes.object).isRequired,
   };
 
   state = {
