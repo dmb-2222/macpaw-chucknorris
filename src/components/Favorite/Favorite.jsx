@@ -1,20 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 // Store
 import getFav from '../../redux/favorite/favoriteSelectors';
 import { handleDelete } from '../../redux/favorite/favoriteActions';
+import { jokeAddFlagIsFavorite } from '../../redux/joke/jokeActions';
 //SVG
-// import iconeHeartFull from '../../assets/icons/icon-heart-full.svg';
-// import iconeLetterFavorite from '../../assets/icons/icone-letter-favorite.svg';
 import iconeFavActive from '../../assets/icons/icone-fav-active.svg';
 // styles
 import styles from './Favorite.module.css';
 //components
 import Items from '../Items';
 
-const Favorite = ({ handleClick, itemsFav, delFav }) => {
-  return (
+const Favorite = ({ handleClick, itemsFav, delFav, addFlagIsFav }) => (
     <>
       <div className={styles.favorite__modul}>
         <nav>
@@ -34,7 +33,8 @@ const Favorite = ({ handleClick, itemsFav, delFav }) => {
                 <Items
                   itemElement={item}
                   handleDelFav={delFav}
-                  isFavorite="fav"
+                  isSavoriteComponent={true}
+                  addFlagIsFav={addFlagIsFav}
                 />
               </li>
             ))}
@@ -48,11 +48,19 @@ const Favorite = ({ handleClick, itemsFav, delFav }) => {
       ></div>
     </>
   );
-};
 const mapDispatchToProps = dispatch => ({
   delFav: (itemsFav, id) => dispatch(handleDelete(itemsFav, id)),
+  addFlagIsFav: id => dispatch(jokeAddFlagIsFavorite(id)),
 });
 const mapStateToProps = state => ({
   itemsFav: getFav(state),
 });
+
+Favorite.propTypes = {
+  handleClick: PropTypes.func.isRequired,
+  itemsFav: PropTypes.array.isRequired,
+  delFav: PropTypes.func.isRequired,
+};
+
 export default connect(mapStateToProps, mapDispatchToProps)(Favorite);
+

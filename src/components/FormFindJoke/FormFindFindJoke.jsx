@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './FindJoke.module.css';
-
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+
 //store
 import {
   getRandomJokeDataFetch,
@@ -9,11 +9,16 @@ import {
   getJokeFromSearchInputFetch,
 } from '../../redux/joke/jokeOperations';
 import getFav from '../../redux/favorite/favoriteSelectors';
+//styles
+import styles from './FormFindJoke.module.css'
 
-class FindJoke extends React.Component {
-  //   static propTypes = {
-  //     transactions: PropTypes.arrayOf(PropTypes.object).isRequired,
-  //   };
+class FormFindJoke extends React.Component {
+  static propTypes = {
+    findFromCategory: PropTypes.func.isRequired,
+    handleInput: PropTypes.func.isRequired,
+    findFromRandom: PropTypes.func.isRequired,
+    items: PropTypes.array.isRequired,
+  };
   state = {
     isActiveCategory: false,
     isActiveSearch: false,
@@ -60,15 +65,15 @@ class FindJoke extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
     const { value, name } = this.state;
-    const { category, handleInput, random, items } = this.props;
+    const { findFromCategory, handleInput, findFromRandom, items } = this.props;
     if (name === 'category') {
-      category(value,items);
+      findFromCategory(value, items);
     }
     if (name === 'liveSearch') {
       handleInput(value, items);
     }
     if (value === 'typeOfSearchRandom') {
-      random(items);
+      findFromRandom(items);
     }
   };
   render() {
@@ -177,9 +182,10 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  random: items => dispatch(getRandomJokeDataFetch(items)),
-  category: (value,items) => dispatch(getJokeFromCategoryFetch(value,items)),
+  findFromRandom: items => dispatch(getRandomJokeDataFetch(items)),
+  findFromCategory: (value, items) =>
+    dispatch(getJokeFromCategoryFetch(value, items)),
   handleInput: (value, items) =>
     dispatch(getJokeFromSearchInputFetch(value, items)),
 });
-export default connect(mapStateToProps, mapDispatchToProps)(FindJoke);
+export default connect(mapStateToProps, mapDispatchToProps)(FormFindJoke);

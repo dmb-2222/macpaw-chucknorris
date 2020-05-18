@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import ReactCardFlip from 'react-card-flip';
-
+import PropTypes from 'prop-types';
 // SVG
 import iconeHeartEmpty from '../../assets/icons/icon-heart-empty.svg';
 import iconeLetter from '../../assets/icons/icon-letter-joke.svg';
 import iconeHeartFull from '../../assets/icons/icon-heart-full.svg';
+import iconeLetterFavorite from '../../assets/icons/icone-letter-favorite.svg';
 // styles
 
 import styles from './Items.module.css';
@@ -13,7 +14,7 @@ const Items = ({
   addToFav = false,
   addFlagIsFav = false,
   handleDelFav = false,
-  isFavorite,
+  isSavoriteComponent = false,
 }) => {
   const [isFlipped, changeFlipped] = useState(false);
   // How about HOOK?
@@ -40,7 +41,7 @@ const Items = ({
         </button>
         <div className={styles.listJoke__box_letter}>
           <img
-            src={iconeLetter}
+            src={isSavoriteComponent ? iconeLetterFavorite : iconeLetter}
             alt="icon-letter-joke"
             className={styles.listJoke__iconLetter}
           />
@@ -56,7 +57,7 @@ const Items = ({
             {categories.length !== 0 && (
               <p
                 className={
-                  isFavorite === 'fav'
+                  isSavoriteComponent
                     ? styles.favorite
                     : styles.listJoke__footerLetter_category
                 }
@@ -97,7 +98,7 @@ const Items = ({
             {categories.length !== 0 && (
               <p
                 className={
-                  isFavorite === 'fav'
+                  isSavoriteComponent
                     ? styles.favorite
                     : styles.listJoke__footerLetter_category
                 }
@@ -112,3 +113,16 @@ const Items = ({
   );
 };
 export default Items;
+
+Items.defaultProps = {
+  isSavoriteComponent: false,
+  handleInput: () => false,
+  findFromRandom: () => false,
+};
+
+Items.propTypes = {
+  isSavoriteComponent: PropTypes.bool.isRequired,
+  handleInput: PropTypes.func.isRequired,
+  findFromRandom: PropTypes.func.isRequired,
+  itemElement: PropTypes.object.isRequired,
+};

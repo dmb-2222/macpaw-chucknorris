@@ -1,11 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { object } from 'prop-types';
 import { connect } from 'react-redux';
 
 // Components
 import Header from './components/Header';
-import FindJoke from './components/FindJoke';
 import Favorite from './components/Favorite';
+import FormFindJoke from './components/FormFindJoke';
 import ListJoke from './components/ListJoke';
 import Loader from './components/Loader';
 
@@ -14,7 +14,7 @@ import styles from './App.module.css';
 class App extends React.Component {
   static propTypes = {
     isLoading: PropTypes.bool.isRequired,
-    items: PropTypes.arrayOf(PropTypes.object).isRequired,
+    items: PropTypes.arrayOf(object).isRequired,
   };
 
   state = {
@@ -37,7 +37,7 @@ class App extends React.Component {
         <div className={styles.headerFavorite}>
           <div className={styles.componentsAndFavorite}>
             <Header handleClick={this.handleClick} toggle={toggle} />
-            <FindJoke />
+            <FormFindJoke />
             {items.length !== 0 && (
               <ListJoke addToFavorite={this.addToFavorite} />
             )}
