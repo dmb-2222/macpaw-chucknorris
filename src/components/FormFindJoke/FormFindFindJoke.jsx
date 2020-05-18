@@ -1,14 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 
-//store
-import {
-  getRandomJokeDataFetch,
-  getJokeFromCategoryFetch,
-  getJokeFromSearchInputFetch,
-} from '../../redux/joke/jokeOperations';
-import getFav from '../../redux/favorite/favoriteSelectors';
 //styles
 import styles from './FormFindJoke.module.css';
 
@@ -179,15 +171,4 @@ class FormFindJoke extends React.Component {
     );
   }
 }
-const mapStateToProps = state => ({
-  items: getFav(state),
-});
-
-const mapDispatchToProps = dispatch => ({
-  findFromRandom: items => dispatch(getRandomJokeDataFetch(items)),
-  findFromCategory: (value, items) =>
-    dispatch(getJokeFromCategoryFetch(value, items)),
-  handleInput: (value, items) =>
-    dispatch(getJokeFromSearchInputFetch(value, items)),
-});
-export default connect(mapStateToProps, mapDispatchToProps)(FormFindJoke);
+export default FormFindJoke;

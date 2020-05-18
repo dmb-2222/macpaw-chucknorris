@@ -1,20 +1,20 @@
 import React from 'react';
-import PropTypes, { object } from 'prop-types';
-import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+// import { connect } from 'react-redux';
 
 // Components
-import Header from './components/Header';
-import Favorite from './components/Favorite';
-import FormFindJoke from './components/FormFindJoke';
-import ListJoke from './components/ListJoke';
-import Loader from './components/Loader';
+import Header from '../Header';
+import Favorite from '../Favorite';
+import FormFindJoke from '../FormFindJoke';
+import ListJoke from '../ListJoke';
+import Loader from '../Loader';
 
 import styles from './App.module.css';
 
 class App extends React.Component {
   static propTypes = {
     isLoading: PropTypes.bool.isRequired,
-    items: PropTypes.arrayOf(object).isRequired,
+    items: PropTypes.arrayOf(PropTypes.object).isRequired,
   };
 
   state = {
@@ -52,8 +52,8 @@ class App extends React.Component {
     );
   }
 }
-const mapStateToProps = state => ({
-  isLoading: state.jokes.loading,
-  items: state.jokes.dataJokes,
-});
-export default connect(mapStateToProps)(App);
+// const mapStateToProps = state => ({
+//   isLoading: state.jokes.loading,
+//   items: state.jokes.dataJokes,
+// });
+export default App;

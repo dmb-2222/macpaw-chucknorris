@@ -1,11 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 
-// store
-import getJoke from '../../redux/joke/jokeSelectors';
-import { addFavorite } from '../../redux/favorite/favoriteActions';
-import { jokeAddFlagIsFavorite } from '../../redux/joke/jokeActions';
 //styles
 import styles from './ListJoke.module.css';
 // component
@@ -28,15 +23,8 @@ const ListJoke = ({ items, addToFav, addFlagIsFav }) => {
     </>
   );
 };
-const mapStateToProps = state => ({
-  items: getJoke(state),
-});
-const mapDispatchToProps = dispatch => ({
-  addToFav: (item) => dispatch(addFavorite(item)),
-  addFlagIsFav: id => dispatch(jokeAddFlagIsFavorite(id)),
-});
 
-export default connect(mapStateToProps, mapDispatchToProps)(ListJoke);
+export default ListJoke;
 
 ListJoke.propTypes = {
   items: PropTypes.array,
