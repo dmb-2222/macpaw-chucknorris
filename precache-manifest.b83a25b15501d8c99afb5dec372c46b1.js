@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f149c7e916c8d967e0546ce637cd73e5",
+    "revision": "e29068fe82a3c31f7665d64a591efd03",
     "url": "/macpaw-chucknorris/index.html"
   },
   {
-    "revision": "448c82824f4aed089837",
-    "url": "/macpaw-chucknorris/static/css/main.87888b97.chunk.css"
+    "revision": "94d929c39050b2b2815c",
+    "url": "/macpaw-chucknorris/static/css/main.2a01d4ef.chunk.css"
   },
   {
     "revision": "94d336d927e483b68cf9",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/macpaw-chucknorris/static/js/2.79edff84.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "448c82824f4aed089837",
-    "url": "/macpaw-chucknorris/static/js/main.174b0658.chunk.js"
+    "revision": "94d929c39050b2b2815c",
+    "url": "/macpaw-chucknorris/static/js/main.e8a63f51.chunk.js"
   },
   {
     "revision": "e0b651f522a345ea0f0e",
