@@ -10,7 +10,7 @@ import {
 } from '../../redux/joke/jokeOperations';
 import getFav from '../../redux/favorite/favoriteSelectors';
 //styles
-import styles from './FormFindJoke.module.css'
+import styles from './FormFindJoke.module.css';
 
 class FormFindJoke extends React.Component {
   static propTypes = {
@@ -75,9 +75,10 @@ class FormFindJoke extends React.Component {
     if (value === 'typeOfSearchRandom') {
       findFromRandom(items);
     }
+    this.setState({ value: '' });
   };
   render() {
-    const { isActiveCategory, isActiveSearch } = this.state;
+    const { isActiveCategory, isActiveSearch, value } = this.state;
     return (
       <div className={styles.findJoke}>
         <p className={styles.findJoke__textMain}>Hey!</p>
@@ -169,6 +170,7 @@ class FormFindJoke extends React.Component {
               placeholder="Free text search..."
               onChange={this.handleChangeInput}
               className={styles.searchConsole}
+              value={value}
             />
           )}
           <button className={styles.findJoke__btn_getJoke}>Get a joke</button>
