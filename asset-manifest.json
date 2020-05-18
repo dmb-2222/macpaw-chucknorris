@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/macpaw-chucknorris/static/css/main.e4a91b6a.chunk.css",
-    "main.js": "/macpaw-chucknorris/static/js/main.bd0cc813.chunk.js",
-    "main.js.map": "/macpaw-chucknorris/static/js/main.bd0cc813.chunk.js.map",
+    "main.css": "/macpaw-chucknorris/static/css/main.b73423f7.chunk.css",
+    "main.js": "/macpaw-chucknorris/static/js/main.7cecda0c.chunk.js",
+    "main.js.map": "/macpaw-chucknorris/static/js/main.7cecda0c.chunk.js.map",
     "runtime-main.js": "/macpaw-chucknorris/static/js/runtime-main.f9074482.js",
     "runtime-main.js.map": "/macpaw-chucknorris/static/js/runtime-main.f9074482.js.map",
-    "static/js/2.79edff84.chunk.js": "/macpaw-chucknorris/static/js/2.79edff84.chunk.js",
-    "static/js/2.79edff84.chunk.js.map": "/macpaw-chucknorris/static/js/2.79edff84.chunk.js.map",
+    "static/js/2.33a64f35.chunk.js": "/macpaw-chucknorris/static/js/2.33a64f35.chunk.js",
+    "static/js/2.33a64f35.chunk.js.map": "/macpaw-chucknorris/static/js/2.33a64f35.chunk.js.map",
     "index.html": "/macpaw-chucknorris/index.html",
-    "precache-manifest.deafe05eb59b636e2849d9e3d2158f0d.js": "/macpaw-chucknorris/precache-manifest.deafe05eb59b636e2849d9e3d2158f0d.js",
+    "precache-manifest.ea6608d10e275614e6c81c4ce5688489.js": "/macpaw-chucknorris/precache-manifest.ea6608d10e275614e6c81c4ce5688489.js",
     "service-worker.js": "/macpaw-chucknorris/service-worker.js",
-    "static/css/main.e4a91b6a.chunk.css.map": "/macpaw-chucknorris/static/css/main.e4a91b6a.chunk.css.map",
-    "static/js/2.79edff84.chunk.js.LICENSE.txt": "/macpaw-chucknorris/static/js/2.79edff84.chunk.js.LICENSE.txt",
+    "static/css/main.b73423f7.chunk.css.map": "/macpaw-chucknorris/static/css/main.b73423f7.chunk.css.map",
+    "static/js/2.33a64f35.chunk.js.LICENSE.txt": "/macpaw-chucknorris/static/js/2.33a64f35.chunk.js.LICENSE.txt",
     "static/media/main.css": "/macpaw-chucknorris/static/media/Roboto-ThinItalic.35a9c89a.ttf",
     "static/media/icon-heart-empty.svg": "/macpaw-chucknorris/static/media/icon-heart-empty.0ebb74f0.svg",
     "static/media/icon-heart-full.svg": "/macpaw-chucknorris/static/media/icon-heart-full.0865c832.svg",
@@ -22,8 +22,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.f9074482.js",
-    "static/js/2.79edff84.chunk.js",
-    "static/css/main.e4a91b6a.chunk.css",
-    "static/js/main.bd0cc813.chunk.js"
+    "static/js/2.33a64f35.chunk.js",
+    "static/css/main.b73423f7.chunk.css",
+    "static/js/main.7cecda0c.chunk.js"
   ]
 }

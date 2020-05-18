@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9f4664b06d9dbcc62ffada41202ff722",
+    "revision": "ea8c6d9a8af281c96a71ae8eb548e0d6",
     "url": "/macpaw-chucknorris/index.html"
   },
   {
-    "revision": "3b38c4a4ad655af4ef2a",
-    "url": "/macpaw-chucknorris/static/css/main.e4a91b6a.chunk.css"
+    "revision": "5653909a4e577e735356",
+    "url": "/macpaw-chucknorris/static/css/main.b73423f7.chunk.css"
   },
   {
-    "revision": "94d336d927e483b68cf9",
-    "url": "/macpaw-chucknorris/static/js/2.79edff84.chunk.js"
+    "revision": "9bc86530355590cd5f4b",
+    "url": "/macpaw-chucknorris/static/js/2.33a64f35.chunk.js"
   },
   {
     "revision": "4ba1a1c11c57ed15aa68008707a3d6b4",
-    "url": "/macpaw-chucknorris/static/js/2.79edff84.chunk.js.LICENSE.txt"
+    "url": "/macpaw-chucknorris/static/js/2.33a64f35.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3b38c4a4ad655af4ef2a",
-    "url": "/macpaw-chucknorris/static/js/main.bd0cc813.chunk.js"
+    "revision": "5653909a4e577e735356",
+    "url": "/macpaw-chucknorris/static/js/main.7cecda0c.chunk.js"
   },
   {
     "revision": "e0b651f522a345ea0f0e",
