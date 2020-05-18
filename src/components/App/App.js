@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 
 // Components
 import Header from '../Header';
@@ -52,8 +52,8 @@ class App extends React.Component {
     );
   }
 }
-// const mapStateToProps = state => ({
-//   isLoading: state.jokes.loading,
-//   items: state.jokes.dataJokes,
-// });
-export default App;
+const mapStateToProps = state => ({
+  isLoading: state.jokes.loading,
+  items: state.jokes.dataJokes,
+});
+export default connect(mapStateToProps)(App);

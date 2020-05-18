@@ -16,6 +16,7 @@ class FormFindJoke extends React.Component {
     isActiveSearch: false,
     value: '',
     name: '',
+    typeOfSearch: '',
   };
 
   handleChangeInput = e => {
@@ -26,45 +27,47 @@ class FormFindJoke extends React.Component {
   };
 
   handleChange = e => {
+    const { search } = e.target.dataset;
+
     if (e.target.name === 'category') {
       this.setState({
-        value: e.target.value,
+        typeOfSearch: search,
         name: e.target.name,
       });
     }
 
-    if (e.target.value === 'typeOfSearchCategory') {
+    if (search === 'typeOfSearchCategory') {
       this.setState({
         isActiveCategory: true,
         isActiveSearch: false,
-        value: e.target.value,
+        typeOfSearch: search,
       });
     }
-    if (e.target.dataset.search === 'HandleInput') {
+    if (search === 'HandleInput') {
       this.setState({
         isActiveSearch: true,
         isActiveCategory: false,
       });
     }
-    if (e.target.value === 'typeOfSearchRandom') {
+    if (search === 'typeOfSearchRandom') {
       this.setState({
         isActiveSearch: false,
         isActiveCategory: false,
-        value: e.target.value,
+        typeOfSearch: search,
       });
     }
   };
   handleSubmit = e => {
     e.preventDefault();
-    const { value, name } = this.state;
+    const { value, name, typeOfSearch } = this.state;
     const { findFromCategory, handleInput, findFromRandom, items } = this.props;
     if (name === 'category') {
-      findFromCategory(value, items);
+      findFromCategory(typeOfSearch, items);
     }
     if (name === 'liveSearch') {
       handleInput(value, items);
     }
-    if (value === 'typeOfSearchRandom') {
+    if (typeOfSearch === 'typeOfSearchRandom') {
       findFromRandom(items);
     }
     this.setState({ value: '' });
@@ -82,7 +85,7 @@ class FormFindJoke extends React.Component {
             <input
               type="radio"
               name="typeOfSearch"
-              value="typeOfSearchRandom"
+              data-search="typeOfSearchRandom"
               className={styles.findJoke__hidden}
               onChange={this.handleChange}
             />
@@ -92,7 +95,7 @@ class FormFindJoke extends React.Component {
             <input
               type="radio"
               name="typeOfSearch"
-              value="typeOfSearchCategory"
+              data-search="typeOfSearchCategory"
               className={styles.findJoke__hidden}
               onChange={this.handleChange}
             />
@@ -105,7 +108,7 @@ class FormFindJoke extends React.Component {
                   type="radio"
                   name="category"
                   className={styles.findJoke__category_hidden}
-                  value="animal"
+                  data-search="animal"
                   onChange={this.handleChange}
                 />
                 <span className={styles.findJoke__category_text}>animal</span>
@@ -115,7 +118,7 @@ class FormFindJoke extends React.Component {
                   type="radio"
                   name="category"
                   className={styles.findJoke__category_hidden}
-                  value="career"
+                  data-search="career"
                   onChange={this.handleChange}
                 />
                 <span className={styles.findJoke__category_text}>career</span>
@@ -125,7 +128,7 @@ class FormFindJoke extends React.Component {
                   type="radio"
                   name="category"
                   className={styles.findJoke__category_hidden}
-                  value="celebrity"
+                  data-search="celebrity"
                   onChange={this.handleChange}
                 />
                 <span className={styles.findJoke__category_text}>
@@ -137,14 +140,13 @@ class FormFindJoke extends React.Component {
                   type="radio"
                   name="category"
                   className={styles.findJoke__category_hidden}
-                  value="dev"
+                  data-search="dev"
                   onChange={this.handleChange}
                 />
                 <span className={styles.findJoke__category_text}>dev</span>
               </label>
             </div>
           )}
-
           <label className={styles.findJoke__radio}>
             <input
               type="radio"
