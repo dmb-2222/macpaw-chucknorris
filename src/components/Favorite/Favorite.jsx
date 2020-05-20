@@ -12,7 +12,9 @@ const Favorite = ({ handleClick, itemsFav, delFav, addFlagIsFav, height }) => (
   <>
     <div
       className={styles.favorite__modul}
-      style={{ height: itemsFav.length === 0 ? '100vh' : `${height}px`  }}
+      style={{
+        height: `${height}px`,
+      }}
     >
       <nav>
         <button onClick={handleClick}>

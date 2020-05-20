@@ -31,8 +31,9 @@ class App extends React.Component {
   };
 
   getHeight = heightListGoke => {
+    // this.props.items.length !==0 &&
     this.setState({
-      height: heightListGoke,
+      height: Number(heightListGoke) + 630,
     });
   };
 

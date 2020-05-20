@@ -49,6 +49,7 @@ nav {
   width: 100vw;
   background-color: #f8f8f8;
   z-index: 2;
+  height: 100%;
 }
 
 @media (min-width: 768px) {
@@ -79,6 +80,7 @@ nav {
   }
   .favorite__modul {
     position: static;
+    height: 100vw;
   }
   nav {
     justify-content: flex-start;
