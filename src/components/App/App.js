@@ -19,6 +19,7 @@ class App extends React.Component {
 
   state = {
     toggle: true,
+    height: '',
   };
 
   handleClick = () => {
@@ -29,8 +30,14 @@ class App extends React.Component {
     });
   };
 
+  getHeight = heightListGoke => {
+    this.setState({
+      height: heightListGoke,
+    });
+  };
+
   render() {
-    const { toggle } = this.state;
+    const { toggle, height } = this.state;
     const { isLoading, items } = this.props;
     return (
       <div className={styles.wraper}>
@@ -39,14 +46,17 @@ class App extends React.Component {
             <Header handleClick={this.handleClick} toggle={toggle} />
             <FormFindJoke />
             {items.length !== 0 && (
-              <ListJoke addToFavorite={this.addToFavorite} />
+              <ListJoke
+                addToFavorite={this.addToFavorite}
+                getHeight={this.getHeight}
+              />
             )}
           </div>
           <div className={styles.componentFavorite}>
             <Favorite handleClick={this.handleClick} />
           </div>
         </div>
-        {!toggle && <Favorite handleClick={this.handleClick} />}
+        {!toggle && <Favorite handleClick={this.handleClick} height={height} />}
         {isLoading && <Loader />}
       </div>
     );

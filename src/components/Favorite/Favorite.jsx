@@ -8,9 +8,12 @@ import styles from './Favorite.module.css';
 //components
 import Items from '../Items';
 
-const Favorite = ({ handleClick, itemsFav, delFav, addFlagIsFav }) => (
+const Favorite = ({ handleClick, itemsFav, delFav, addFlagIsFav, height }) => (
   <>
-    <div className={styles.favorite__modul}>
+    <div
+      className={styles.favorite__modul}
+      style={{ height: itemsFav.length === 0 ? '100vh' : `${height}px`  }}
+    >
       <nav>
         <button onClick={handleClick}>
           <img
