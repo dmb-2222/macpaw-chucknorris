@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/macpaw-chucknorris/static/css/main.ae5b348f.chunk.css",
-    "main.js": "/macpaw-chucknorris/static/js/main.d04bba98.chunk.js",
-    "main.js.map": "/macpaw-chucknorris/static/js/main.d04bba98.chunk.js.map",
+    "main.js": "/macpaw-chucknorris/static/js/main.4089683b.chunk.js",
+    "main.js.map": "/macpaw-chucknorris/static/js/main.4089683b.chunk.js.map",
     "runtime-main.js": "/macpaw-chucknorris/static/js/runtime-main.f9074482.js",
     "runtime-main.js.map": "/macpaw-chucknorris/static/js/runtime-main.f9074482.js.map",
     "static/js/2.b7b9470e.chunk.js": "/macpaw-chucknorris/static/js/2.b7b9470e.chunk.js",
     "static/js/2.b7b9470e.chunk.js.map": "/macpaw-chucknorris/static/js/2.b7b9470e.chunk.js.map",
     "index.html": "/macpaw-chucknorris/index.html",
-    "precache-manifest.993f56daf9fded4652ecff46102831e6.js": "/macpaw-chucknorris/precache-manifest.993f56daf9fded4652ecff46102831e6.js",
+    "precache-manifest.9eff55dbb4af7484b56e15053700f8f2.js": "/macpaw-chucknorris/precache-manifest.9eff55dbb4af7484b56e15053700f8f2.js",
     "service-worker.js": "/macpaw-chucknorris/service-worker.js",
     "static/css/main.ae5b348f.chunk.css.map": "/macpaw-chucknorris/static/css/main.ae5b348f.chunk.css.map",
     "static/js/2.b7b9470e.chunk.js.LICENSE.txt": "/macpaw-chucknorris/static/js/2.b7b9470e.chunk.js.LICENSE.txt",
@@ -24,6 +24,6 @@
     "static/js/runtime-main.f9074482.js",
     "static/js/2.b7b9470e.chunk.js",
     "static/css/main.ae5b348f.chunk.css",
-    "static/js/main.d04bba98.chunk.js"
+    "static/js/main.4089683b.chunk.js"
   ]
 }
