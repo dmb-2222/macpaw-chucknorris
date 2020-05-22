@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/macpaw-chucknorris/static/css/main.620b32c9.chunk.css",
-    "main.js": "/macpaw-chucknorris/static/js/main.719b1007.chunk.js",
-    "main.js.map": "/macpaw-chucknorris/static/js/main.719b1007.chunk.js.map",
+    "main.css": "/macpaw-chucknorris/static/css/main.602c24ba.chunk.css",
+    "main.js": "/macpaw-chucknorris/static/js/main.804a9631.chunk.js",
+    "main.js.map": "/macpaw-chucknorris/static/js/main.804a9631.chunk.js.map",
     "runtime-main.js": "/macpaw-chucknorris/static/js/runtime-main.f9074482.js",
     "runtime-main.js.map": "/macpaw-chucknorris/static/js/runtime-main.f9074482.js.map",
     "static/js/2.b7b9470e.chunk.js": "/macpaw-chucknorris/static/js/2.b7b9470e.chunk.js",
     "static/js/2.b7b9470e.chunk.js.map": "/macpaw-chucknorris/static/js/2.b7b9470e.chunk.js.map",
     "index.html": "/macpaw-chucknorris/index.html",
-    "precache-manifest.b0ef7a8e10c3250bb29d3bc7599949f1.js": "/macpaw-chucknorris/precache-manifest.b0ef7a8e10c3250bb29d3bc7599949f1.js",
+    "precache-manifest.addc332486cd8a7c8af7eb6f5423cbdb.js": "/macpaw-chucknorris/precache-manifest.addc332486cd8a7c8af7eb6f5423cbdb.js",
     "service-worker.js": "/macpaw-chucknorris/service-worker.js",
-    "static/css/main.620b32c9.chunk.css.map": "/macpaw-chucknorris/static/css/main.620b32c9.chunk.css.map",
+    "static/css/main.602c24ba.chunk.css.map": "/macpaw-chucknorris/static/css/main.602c24ba.chunk.css.map",
     "static/js/2.b7b9470e.chunk.js.LICENSE.txt": "/macpaw-chucknorris/static/js/2.b7b9470e.chunk.js.LICENSE.txt",
     "static/media/main.css": "/macpaw-chucknorris/static/media/Roboto-ThinItalic.35a9c89a.ttf",
     "static/media/icon-heart-empty.svg": "/macpaw-chucknorris/static/media/icon-heart-empty.0ebb74f0.svg",
@@ -23,7 +23,7 @@
   "entrypoints": [
     "static/js/runtime-main.f9074482.js",
     "static/js/2.b7b9470e.chunk.js",
-    "static/css/main.620b32c9.chunk.css",
-    "static/js/main.719b1007.chunk.js"
+    "static/css/main.602c24ba.chunk.css",
+    "static/js/main.804a9631.chunk.js"
   ]
 }
