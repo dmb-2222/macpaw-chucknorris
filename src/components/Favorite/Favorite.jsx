@@ -13,7 +13,7 @@ const Favorite = ({ handleClick, itemsFav, delFav, addFlagIsFav, height }) => (
     <div
       className={styles.favorite__modul}
       style={{
-        height: `${height}px`,
+        height: itemsFav.length <= 2 && height < 200 ? '100%' : `${height}px`,
       }}
     >
       <nav>

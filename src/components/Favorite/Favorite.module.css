@@ -49,12 +49,10 @@ nav {
   width: 100vw;
   background-color: #f8f8f8;
   z-index: 2;
-  height: 100%;
 }
 
 @media (min-width: 768px) {
   .favorite__modul {
-    height: 100%;
     padding: 40px;
     width: 480px;
     margin-left: auto;
